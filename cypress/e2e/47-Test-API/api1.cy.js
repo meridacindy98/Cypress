@@ -42,12 +42,46 @@ describe("Api POST", () => {
             method: "POST",
             url: "http://localhost:3000/posts",
             body:{
-                "id": 4,
+                "id": 7,
                 "title": "Prueba POST",
                 "author": "Prueba"
             }
         }).then( response => {
             expect(response.status).to.eq(201)
+        } )  
+    })
+    
+})
+
+describe("Api PUT", () => {
+
+    it("1 - Test api PUT", () => {
+        cy.request({
+            method: "PUT",
+            url: "http://localhost:3000/posts/4",
+            body:{
+                "title": "cac",
+                "author": "caca"
+            }
+        }).then( response => {
+            expect(response.status).to.eq(200)
+        } )  
+    })
+    
+})
+
+describe("Api DELETE", () => {
+
+    it("1 - Test api DELETE", () => {
+        cy.request({
+            method: "DELETE",
+            url: "http://localhost:3000/posts/4",
+            body:{
+                "title": "cac",
+                "author": "caca"
+            }
+        }).then( response => {
+            expect(response.status).to.eq(200)
         } )  
     })
     

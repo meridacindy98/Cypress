@@ -9,8 +9,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
     "cypress": "^10.11.0",
     "cypress-plugin-tab": "^1.0.5",
-    "cypress-xpath": "^2.0.1"
+    "cypress-xpath": "^2.0.1",
+    "esbuild": "^0.15.16"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "latest",
+    "@cypress/browserify-preprocessor": "latest",
+    "save-dev": "0.0.1-security"
   }
 }
